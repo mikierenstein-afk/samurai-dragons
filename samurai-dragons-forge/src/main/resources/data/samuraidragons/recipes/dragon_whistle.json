@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " S ",
+    "SPS",
+    " T "
+  ],
+  "key": {
+    "S": {
+      "item": "samuraidragons:dragon_scale"
+    },
+    "P": {
+      "item": "minecraft:ender_pearl"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "samuraidragons:dragon_whistle",
+    "count": 1
+  }
+}
