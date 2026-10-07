@@ -8,13 +8,13 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
-public class DragonMountRenderer extends MobRenderer<DragonMountEntity, DragonModel> {
+public class DragonMountRenderer extends MobRenderer<DragonMountEntity, DragonMountModel> {
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(SamuraiDragons.MOD_ID, "textures/entity/dragon_mount.png");
     private static final float SCALE = 1.8f;
 
     public DragonMountRenderer(EntityRendererProvider.Context ctx) {
-        super(ctx, new DragonModel(ctx.bakeLayer(DragonModel.LAYER)), 1.0f);
+        super(ctx, new DragonMountModel(ctx.bakeLayer(DragonMountModel.LAYER)), 1.0f);
     }
 
     @Override

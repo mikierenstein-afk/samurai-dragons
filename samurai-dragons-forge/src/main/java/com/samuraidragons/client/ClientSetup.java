@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 public class ClientSetup {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(DragonModel.LAYER, DragonModel::createLayer);
+        event.registerLayerDefinition(DragonMountModel.LAYER, DragonMountModel::createLayer);
     }
 
     @SubscribeEvent
