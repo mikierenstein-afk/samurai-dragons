@@ -18,9 +18,10 @@ jobs:
         with:
           gradle-version: '8.5'
       - name: Build
+        working-directory: samurai-dragons-forge
         run: gradle build --no-daemon
       - name: Upload the mod jar
         uses: actions/upload-artifact@v4
         with:
           name: samurai-dragons-jar
-          path: build/libs/*.jar
+          path: samurai-dragons-forge/build/libs/*.jar
