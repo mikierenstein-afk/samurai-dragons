@@ -7,6 +7,8 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
@@ -26,6 +28,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
+import org.joml.Vector3f;
 
 import java.util.UUID;
 
@@ -107,8 +110,8 @@ public class DragonMountEntity extends PathfinderMob {
     }
 
     @Override
-    public double getPassengersRidingOffset() {
-        return getBbHeight() * 0.8;
+    protected Vector3f getPassengerAttachmentPoint(Entity passenger, EntityDimensions dimensions, float scale) {
+        return new Vector3f(0.0f, dimensions.height * 0.8f, 0.0f);
     }
 
     @Override
